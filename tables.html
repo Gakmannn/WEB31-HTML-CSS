@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* внешние границы всей таблицы */
+    table {
+      /* border-collapse: collapse; */
+      border: 1px solid black;
+      border-collapse: separate;
+      border-spacing: 10px;
+      /*скрываем пустые ячейки*/
+      empty-cells: hide;
+    } 
+    /* границы ячеек заголовков столбцов */
+    th, td {border: 1px solid black;}
+    /* Если ячейке указать высоту, она воздействует на всю строку */
+    /* Если ячейке указать ширину, она воздействует на всю колонку */
+    #uniq{
+      width: 30vw;
+      height: 20vh;
+    }
+    .numbers {
+      border-collapse: collapse;
+    }
+    .numbers td {
+      padding: 10px;
+      text-align: center;
+    }
+    .col-1{
+      background-color: #ffcccc;
+    }
+    .col-2{
+      background-color: #ff9999;
+    }
+    .col-3{
+      background-color: #cc9999;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <table class="numbers">
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td colspan="4">6</td>
+    </tr>
+    <tr>
+      <td rowspan="2">9</td>
+      <td>10</td>
+      <td rowspan="2" colspan="2">11</td>
+    </tr>
+    <tr>
+      <td>14</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table>
+    <caption>Заголовок таблицы</caption>
+    <colgroup>
+      <col class="col-1">
+      <col span="1" class="col-2">
+      <col class="col-3">
+    </colgroup>
+    <thead>
+      <th>head</th>
+      <th>sdfsd</th>
+      <th>sdfsd</th>
+    </thead>
+    <tfoot>
+      <th>footer</th>
+      <th>sdfsd</th>
+      <th>sdfsd</th>
+    </tfoot>
+    <tbody>  
+      <tr>
+        <td>Column 1</td>
+        <td>Column 2</td>
+        <td>Column 3</td>
+      </tr>
+      <tr>
+        <td>Lorem ipsum dolor.</td>
+        <td id="uniq">Lorem ipsum dolor.</td>
+        <td>Lorem ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td>Lorem.</td>
+        <td>Lorem.</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
