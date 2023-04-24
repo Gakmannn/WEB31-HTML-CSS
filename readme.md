@@ -1,1 +1,1 @@
-Посмотреть на сайте [GitHub Pages](https://gakmannn.github.io/intro/).
+Посмотреть на сайте [GitHub Pages](https://gakmannn.github.io/WEB31-HTML-CSS/).
