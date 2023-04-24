@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li:hover {
+      background: #3f8059;
+    }
+    ul>li {
+      display: inline-block;
+      margin-left: -4px;
+      background: #4c996b;
+      padding: 5px 10px;
+      position: relative;
+      width: 100px;
+      color: white;
+      text-align: center;
+      border: #458c62 1px solid;
+      box-sizing: border-box;
+    }
+    .hover {
+      display: none;
+      position: absolute;
+      left:0px;
+      top: 29px;
+    }
+    .hover li {
+      margin-left: 0px;
+    }
+    li:hover>.hover {
+      display: block;
+    }
+    .inner {
+      left:99px;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  
+  <ul>
+    <li>Home</li>
+    <li>Cetegories
+      <ul class="hover">
+        <li>Man</li>
+        <li>Woman
+          <ul class="hover inner">
+            <li>Dress</li>
+            <li>Pents</li>
+            <li>Shoes</li>
+          </ul>
+        </li>
+        <li>Kids</li>
+      </ul>
+    </li>
+    <li>About</li>
+    <li>Contacts</li>
+  </ul>
+
+</body>
+</html>
