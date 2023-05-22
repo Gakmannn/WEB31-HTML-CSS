@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .img {
+      width: 200px; 
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+    .wrapper {
+      position:absolute; 
+      left: 50%; 
+      transform: translate(-50%);
+    }
+    img {
+      min-width: 200px; 
+      height: 300px;
+      object-fit: cover 
+    }
+  </style>
+</head>
+<body>
+  <div class="img">
+    <div class="wrapper">
+      <img src="img/62957de0-210c-50a7-acc2-17f0960aa74b.jpeg" alt="">
+    </div>
+  </div>
+  <div class="img">
+    <div class="wrapper">
+      <img src="img/9690c871db224cba0e8b6d812887b259.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>
