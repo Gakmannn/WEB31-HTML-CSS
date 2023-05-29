@@ -5,8 +5,71 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .main {
+      position: absolute;
+      top:50%;
+      left: 50%;
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+      border: 2px blue solid;
+      transform: translate(-50%,-50%);
+    }
+    .main div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: blue;
+      transform: translate(-50%,-50%);
+    }
+    .hh {
+      width: 8px;
+      height: 80px;
+      background-color: blue;
+      transform-origin: 50% 0;
+      transform: translate(-50%) rotate(180deg);
+      animation: clock 43200s linear infinite;
+    }
+    .mm {
+      width: 6px;
+      height: 100px;
+      background-color: black;
+      transform-origin: 50% 0;
+      transform: translate(-50%) rotate(180deg);
+      animation: clock 3600s steps(60) infinite;
+    }
+    .ss {
+      width: 4px;
+      height: 120px;
+      background-color: red;
+      transform-origin: 50% 0;
+      transform: translate(-50%) rotate(180deg);
+      animation: clock 60s steps(60) infinite;
+    }
+    @keyframes clock {
+      0% {
+        transform: translate(-50%) rotate(180deg);
+      }
+      100% {
+        transform: translate(-50%) rotate(540deg);
+      }
+    }
+  </style>
 </head>
 <body>
-  sdffgsdf
+  
+  <div class="main">
+    <div class="dot"></div>
+    <div class="hh"></div>
+    <div class="mm"></div>
+    <div class="ss"></div>
+  </div>
+
 </body>
 </html>
