@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .elem {
+      width: 500px;
+      padding: 15px;
+      border: 2px solid #ccc;
+      margin: 20px;
+    }
+
+    .inline {
+      background: lightblue;
+      display: inline;
+      padding: 5px;
+    }
+
+    .inline-block {
+      background: lightcoral;
+      display: inline-block;
+      padding: 5px;
+    }
+
+    .block {
+      background: lightseagreen;
+      display: block;
+      padding: 5px;
+    }
+
+    .li {
+      display: list-item;
+    }
+
+    .inline-flex {
+      display: inline-flex;
+      background: lightcyan;
+      padding: 5px;
+    }
+
+    .selection::selection {
+      background: lightpink;
+    }
+
+    p::first-letter {
+      display: inline-block;
+      color: green;
+      font-size: 2em;
+      font-weight: bold;
+      border: 1px solid #1ebc1e;
+      padding: 2px 8px;
+      margin-right: 10px;
+      margin-top: 7px;
+      float: left;
+    }
+
+    .bigBlock div {
+      margin: 10px;
+      padding: 10px;
+      background-color: lightgreen;
+    }
+
+    .bigBlock>div:first-of-type {
+      background-color: lightpink;
+    }
+
+    .bigBlock>div:last-of-type {
+      background-color: lavender;
+    }
+
+    .bigBlock>div:nth-of-type(even) {
+      background-color: firebrick;
+    }
+    mark {
+      background-color: teal;
+    }
+    p::selection {
+      background-color: lightcoral;
+    }
+    main p:nth-of-type(2n-1) {
+      color: #1ebc1e;
+    }
+    main p:nth-of-type(2n) {
+      color: #ccc;
+    }
+    main p:nth-of-type(3n) {
+      color: red;
+    }
+    .only p {
+      color: lightgrey;
+    }
+    .only p:only-child {
+      color: lightsalmon;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="elem">
+
+  </div>
+   <button>sfsd</button>
+   <button>sfsd</button>
+  <div class="inline">inl
+    <!-- 	В строчные элементы не допускается помещать блочные -->
+    		<!-- <div class="block">block</div> -->
+    ine
+  </div>
+  Строчно-блочные элементы ведут себя, с одной стороны, как строчные, т.е. занимают ровно столько места, сколько в них находится текста, а с другой стороны — интерпретируют отступы, ширину и выравнивание текста так, как это делают блочные элементы.
+  <!-- inline-block ведёт себя снаружи как строчный элемент, а внутри, как блочный -->
+  <div class="inline-block">inline
+    <div class="block">block</div>
+    -block
+  </div>
+  <div class="inline-block">inline
+    <div class="block">block</div>
+    -block
+  </div>
+  <div class="inline-flex">
+    <div class="block">block</div>
+    <div class="block">block</div>
+  </div>
+  <div class="block">block</div>
+  <div class="block selection">Выдели меня</div>
+
+  <ul>
+    <div class="li">adfasdasdf</div>
+    <li>sdfsdfsdfs</li>
+    <div class="li">adfasdasdf</div>
+  </ul>
+
+  <p>
+    Lorem ipsum, dolor sit <button>sfsd</button> amet consectetur adipisicing elit. <mark>Quod velit hic delectus dolore nobis sint architecto</mark>
+    voluptatibus adipisci nostrum aut, tempora obcaecati ad odio commodi aliquam quas ut fuga doloremque!
+    Nesciunt ipsam officia rerum, facilis nobis odit at excepturi nemo soluta officiis doloremque maxime, suscipit
+    magnam nulla quisquam ratione aspernatur! Qui esse non dignissimos eligendi maxime placeat nisi similique
+    repellendus?
+  </p>
+
+  <div class="bigBlock">
+    <h1>sdgdfhdfgdfg</h1>
+    <div>sfsdf</div>
+    <div>sfsdf</div>
+    <div>sfsdf</div>
+    <div>sfsdf</div>
+    <div>sfsdf
+      <div>ghjfghjgh</div>
+    </div>
+    <div>sfsdf</div>
+    <div>sfsdf</div>
+  </div>
+
+  <div class="only">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ratione repellendus amet assumenda, mollitia veritatis laborum ipsa excepturi quo a eaque delectus soluta nostrum sapiente porro rem perferendis expedita alias?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ratione repellendus amet assumenda, mollitia veritatis laborum ipsa excepturi quo a eaque delectus soluta nostrum sapiente porro rem perferendis expedita alias?</p>
+  </div>
+  
+  <div class="only">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ratione repellendus amet assumenda, mollitia veritatis laborum ipsa excepturi quo a eaque delectus soluta nostrum sapiente porro rem perferendis expedita alias?</p>
+  </div>
+
+  <main>
+    <p><span>1</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, ipsum, laudantium. Ipsa possimus
+      consequuntur quasi consequatur veritatis, qui, eligendi mollitia sed non distinctio repellendus alias iste aut, id
+      nam facilis quaerat dolorem! Nobis, neque placeat recusandae excepturi magnam. Sit sapiente blanditiis beatae saepe
+      debitis omnis?</p>
+    <p><span>2</span>Facere tempora tenetur minus, inventore, unde illum eveniet nostrum labore fuga magnam iure magni
+      veritatis exercitationem non cum, beatae sed odit veniam deserunt voluptas reiciendis explicabo rerum. Libero
+      quibusdam vero hic, esse sint dicta sed, quidem quas dolore, aut temporibus molestias, officia nobis cumque
+      molestiae.</p>
+    <p><span>3</span>Aspernatur, provident velit atque sint asperiores, quibusdam reiciendis soluta alias nemo eveniet
+      modi cupiditate tempore neque aliquam deserunt deleniti hic sit excepturi. Eius, facilis! Alias id eius dolorem
+      minus. Amet rem unde, esse sed harum fugit totam incidunt assumenda quo! Odit libero, eum perspiciatis ipsam.</p>
+    <p><span>4</span>Cumque illum, harum blanditiis consequatur, illo laboriosam sed, non impedit voluptatem excepturi
+      esse. Et eius provident accusantium aperiam tenetur, ad ipsam? Ut, animi ratione rerum cum aliquid corporis porro
+      quibusdam, voluptates cumque? Aspernatur nihil aliquam hic. Veritatis, quis, ut! Quisquam cum maiores explicabo
+      distinctio ducimus.</p>
+    <p><span>5</span>Dolore minima optio rem nam facilis ipsam harum nisi atque voluptate laborum assumenda ipsa saepe
+      minus magni eius laudantium, libero temporibus vel eligendi quos? Earum aut explicabo, et voluptates facere dolore
+      nemo qui at saepe esse quaerat expedita placeat quidem veniam fugit iste assumenda neque.</p>
+    <p><span>6</span>In sint dolores ipsam, fugit provident unde itaque nesciunt aliquam illum explicabo ipsum? Quas,
+      labore delectus illo. Vero asperiores tempora deleniti illo nesciunt quos corrupti ipsum ut ullam sequi veniam sed
+      quasi sint repellendus incidunt laborum qui temporibus, iure vitae hic molestiae! Quia, itaque, voluptates.</p>
+    <p><span>7</span>Consequuntur officia inventore corporis a aut ipsa molestias, quia ipsum beatae reprehenderit
+      officiis est praesentium numquam repellat quo modi minus nisi provident fuga asperiores, sequi labore! Consectetur
+      optio at quaerat est ex molestiae doloremque, quae illum, repellat ratione voluptate sapiente reprehenderit
+      asperiores ipsam, dignissimos ab.</p>
+    <p><span>8</span>Harum qui quibusdam corrupti ratione, enim, veritatis doloremque dicta eos officiis sint sunt quod
+      omnis quas laborum tenetur quaerat soluta obcaecati ullam possimus, animi temporibus sapiente, doloribus. Voluptate
+      eveniet sapiente sunt itaque quia, quam magni, a! A aliquam alias fugiat iure voluptate error ipsam ab!</p>
+    <p><span>9</span>Possimus velit doloribus quasi unde culpa vel pariatur voluptatibus minus saepe perferendis nam iste,
+      dignissimos vero, modi optio maxime deleniti reiciendis, amet quidem! Nobis aliquam rem nulla odio ad enim
+      repellendus. Debitis magnam aliquid praesentium, rerum temporibus minima a alias cum quae expedita tempore harum!
+    </p>
+    <p><span>10</span>Quod, accusamus! Dicta molestias, ducimus quibusdam, corrupti sequi incidunt repellendus dolorem,
+      qui suscipit nesciunt totam illo accusantium. Id commodi laborum impedit nemo ab obcaecati itaque. Et vitae,
+      consequatur aperiam impedit illo ea quam, beatae quos eos dicta cumque a culpa sequi. Sed, perferendis id expedita.
+    </p>
+  
+  </main>
+
+</body>
+
+</html>
