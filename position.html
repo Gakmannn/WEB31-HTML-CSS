@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
+      border: 1px solid gray;
+    }
+    .position {
+      /* Относительное позиционирование не выбивает блок из обжего потока, но позволяет сместить его относительно себя же при помощи свойств top, right, bottom, left так же, как это делает transform: translate */
+      position:relative;
+      background-color: white;
+      bottom: 10px;
+      left: 20px;
+      /* left: 0; */
+      /* left: 50%;*/
+      /* transform: translate(-10%, -20%);  */
+      /* margin: 0 calc((100% - 600px)/2); */
+      /* | relative | absolute | fixed |sticky */
+      
+      /* Overlay */
+      /* background-color: black;
+      opacity: 0.3;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; */
+    }
+    .position div {
+      background: gray;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+    }
+    .overlay {
+      position: fixed;
+      background-color: black;
+      opacity: 0.3;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      /* Нужны только в контексте примера */
+      max-width: 100%;
+      margin: 0;
+    }
+    .sticky {
+      position: sticky;
+      background-color: lightseagreen;
+      top: 0;
+      z-index: 1;
+    }
+    .bottom {
+      top:auto;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus distinctio in minima error accusantium molestias architecto dolorem debitis fugiat nisi, officiis provident corrupti hic reprehenderit vitae doloremque tempora quam asperiores.</div>
+  <div class="sticky">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus distinctio in minima error accusantium molestias architecto dolorem debitis fugiat nisi, officiis provident corrupti hic reprehenderit vitae doloremque tempora quam asperiores.</div>
+  <div style="background-color: lightgreen;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus distinctio in minima error accusantium molestias architecto dolorem debitis fugiat nisi, officiis provident corrupti hic reprehenderit vitae doloremque tempora quam asperiores.</div>
+  <div class="position">
+    <div class="inner">
+      I'm inner
+    </div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus distinctio in minima error accusantium molestias architecto dolorem debitis fugiat nisi, officiis provident corrupti hic reprehenderit vitae doloremque tempora quam asperiores.</div>
+  <div style="background-color: lightpink;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus distinctio in minima error accusantium molestias architecto dolorem debitis fugiat nisi, officiis provident corrupti hic reprehenderit vitae doloremque tempora quam asperiores.</div>
+  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus distinctio in minima error accusantium molestias architecto dolorem debitis fugiat nisi, officiis provident corrupti hic reprehenderit vitae doloremque tempora quam asperiores.</div>
+  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus distinctio in minima error accusantium molestias architecto dolorem debitis fugiat nisi, officiis provident corrupti hic reprehenderit vitae doloremque tempora quam asperiores.</div>
+  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus distinctio in minima error accusantium molestias architecto dolorem debitis fugiat nisi, officiis provident corrupti hic reprehenderit vitae doloremque tempora quam asperiores.</div>
+  <div class="sticky bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus distinctio in minima error accusantium molestias architecto dolorem debitis fugiat nisi, officiis provident corrupti hic reprehenderit vitae doloremque tempora quam asperiores.</div>
+  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus distinctio in minima error accusantium molestias architecto dolorem debitis fugiat nisi, officiis provident corrupti hic reprehenderit vitae doloremque tempora quam asperiores.</div>
+  <div class="overlay"></div>
+</body>
+</html>
