@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,97 +8,176 @@
   <title>Document</title>
   <style>
     a {
-			display: block;
-			width: 250px;
-			margin: 15px auto;
-			background-color: #1bbede;
-			border: 2px solid #616bf5;
-			border-radius: 10px;
-			padding: 10px;
-			text-align: center;
-			color: white;
-			text-decoration: none;
-		}
+      display: block;
+      width: 250px;
+      margin: 15px auto;
+      background-color: #1bbede;
+      border: 2px solid #616bf5;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+    }
+    .flex {
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      text-align: center;
+    }
+    .materials {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .materials>.flex {
+      border: 2px solid #616bf5;
+      border-top: 0;
+    }
   </style>
 </head>
+
 <body>
 
-  <p>
-    Скачать и установить Git
-  </p>
-  <p>
-    Перезагрузить VSCode
-  </p>
-  <p>
-    Перейти в книгу, пункт 1.6 https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
-  </p>
-  <p>
-    Ввести 2 команды в VSCode (Установка имени и почты git)
-  </p>
-  <p>
-    git config --global user.name "John Doe"
-  </p>
-  <p>
-    git config --global user.email johndoe@example.com
-  </p>
-  <p>
-    Нажать на шестерёнку, включить синхронизацию через GitHub
-  </p>
+  <div class="flex materials">
+    <div>
+      <h1>Общие материалы</h1>
+      <div class="flex">
 
-  <a href="https://disk.yandex.ru/d/KwdXQropyuL3Iw" target="_blanc">Учебные материалы</a>
-  <a href="https://doka.guide/html/flow/" target="_blanc">Поток документа HTML</a>
-  <a href="https://doka.guide/html/" target="_blanc">Все теги HTML с описанием работы</a>
-  <a href="https://doka.guide/js/how-the-browser-creates-pages/" target="_blanc">Как браузер рисует страницы</a>
-  <a href="https://doka.guide/css/" target="_blanc">Всё, что можно знать про CSS</a>
-  <a href="https://wp-kama.ru/id_5875/30-css-selektorov.html" target="_blanc">CSS селекторы</a>
-  <a href="https://validator.w3.org/nu/" target="_blanc">HTML валидация</a>
-  
-  <a href="https://cssgridgarden.com/#ru" target="_blanc">Игра про гриды</a>
-  <a href="https://colorlib.com/wp/cat/portfolio/" target="_blanc">Выбор макета для портфолио</a>
-  <a href="https://grid.layoutit.com/" target="_blanc">GRID генератор</a>
-  <a href="https://habr.com/ru/company/skillfactory/blog/713386/" target="_blanc">Анимация гридов</a>
+        <div>
+          <a href="https://disk.yandex.ru/d/KwdXQropyuL3Iw" target="_blanc">Учебные материалы</a>
+      <a href="https://doka.guide/html/flow/" target="_blanc">Поток документа HTML</a>
+      <a href="https://doka.guide/html/" target="_blanc">Все теги HTML с описанием работы</a>
+      <a href="https://doka.guide/js/how-the-browser-creates-pages/" target="_blanc">Как браузер рисует страницы</a>
+      <a href="https://doka.guide/css/" target="_blanc">Всё, что можно знать про CSS</a>
+      <a href="https://wp-kama.ru/id_5875/30-css-selektorov.html" target="_blanc">CSS селекторы</a>
+    </div>
+    <div>
+      <a href="https://validator.w3.org/nu/" target="_blanc">HTML валидация</a>
+      <a href="https://cssgridgarden.com/#ru" target="_blanc">Игра про гриды</a>
+      <a href="https://colorlib.com/wp/cat/portfolio/" target="_blanc">Выбор макета для портфолио</a>
+      <a href="https://grid.layoutit.com/" target="_blanc">GRID генератор</a>
+      <a href="https://habr.com/ru/company/skillfactory/blog/713386/" target="_blanc">Анимация гридов</a>
+      
+      <a href="https://git-scm.com/book/ru/v2/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%9F%D0%B5%D1%80%D0%B2%D0%BE%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-Git" target="_blanc">настройка гит</a>
+    </div>
+  </div>
+  </div>
+    <div>
+      <h2>Bootstrap</h2>
+      <a href="https://getbootstrap.su/" target="_blank">Русская версия</a>
+      <a href="https://getbootstrap.com/" target="_blank">Английская версия</a>
+      <a href="https://icons.getbootstrap.su/" target="_blank">Иконки</a>
+      <a href="https://cheatsheet.getbootstrap.su/" target="_blank">Шпаргалка</a>
+      <a href="https://disk.yandex.ru/d/KwdXQropyuL3Iw" target="_blank">Материалы</a>
+      <a href="https://getbootstrap.su/docs/5.3/getting-started/introduction/" target="_blank">Иконки</a>
+      <a href="https://getbootstrap.su/docs/5.2/examples/cheatsheet/" target="_blank">Примеры </a>
+    </div>
+  </div>
 
-  <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup" target="_blanc">настройка гит</a>
+  <div class="materials" style="border: 2px solid #616bf5;">
+    <div class="flex">
+      <div style="flex:1">
+        <h2>Материалы уроков</h2>
+      </div>
+      <div style="flex:1">
+        <h2>Коды уроков + доп.материалы</h2>
+      </div>
+      <div style="flex:1">
+          <h3>ДЗ</h3>
+      </div>
+    </div>
+    <div class="flex">
+      <div style="flex:1">
+        <a href="https://disk.yandex.ru/i/_7wfjKNFUe-J_Q" target="_blank">Таблицы</a>
+      </div>
+      <div style="flex:1">
+        <a href="tables.html" target="_blank">Таблицы</a>
+      </div>
+      <div style="flex:1">
+        <a href="https://disk.yandex.ru/i/nQ9Euee_uCgcIw" target="_blank">1</a>
+        <a href="./tables/" target="_blank">1 решение</a>
+        <a href="https://disk.yandex.ru/i/tqiyiByrXXbyww" target="_blank">2</a>
+      </div>
+    </div>
+    <div class="flex">
+      <div style="flex:1">
+          <a href="https://disk.yandex.ru/i/Z7-joNLEqmUSJg" target="_blank">Анимации</a>
+      </div>
+      <div style="flex:1">
+        <a href="./animation/" target="_blank">Анимации</a>
+        <a href="https://doka.guide/css/transition/" target="_blank">Doca transition</a>
+        <a href="https://doka.guide/css/animation/" target="_blank">Doca Анимации</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function" target="_blank">Функции
+          анимации</a>
+        <a href="https://cubic-bezier.com/#0,0,1,1" target="_blank">Генератор функций анимаций</a>
+      </div>
+      <div style="flex:1">
+        <a href="https://disk.yandex.ru/i/7WSWKy4CCEggMA" target="_blank">анимации</a>
+        <a href="https://disk.yandex.ru/i/5M1x0xow60Mrjg" target="_blank">анимации</a>
+      </div>
+    </div>
+    <div class="flex">
+      <div style="flex:1">
+        <a href="https://disk.yandex.ru/i/5W36kPgotlvQOA" target="_blank">Блочная модель</a>
+      </div>
+      <div style="flex:1">
+        <a href="block_model.html" target="_blank">Блочная модель</a>
+      </div>
+      <div style="flex:1">
+        <a href="https://disk.yandex.ru/i/p5TxQqGLj2RMdA" target="_blank">блоки</a>
+        <a href="https://disk.yandex.ru/i/nbWRua1MEU5_xw" target="_blank">блоки</a>
+      </div>
+    </div>
+    <div class="flex">
+      <div style="flex:1">
+        <a href="https://disk.yandex.ru/i/1zpAm9CkffpUXQ" target="_blank">Свойство display и псевдоэлементы</a>
+      </div>
+      <div style="flex:1">
+        <a href="display&pseudo.html" target="_blank">Свойство display и псевдоэлементы</a>
+      </div>
+      <div style="flex:1">
+        <a href="https://disk.yandex.ru/i/fhZCyLrQE91GSw" target="_blank">display и псевдоэлементы</a>
+        <a href="https://disk.yandex.ru/i/UKO8vh7aEFO12A" target="_blank">display и псевдоэлементы</a>
+      </div>
+    </div>
+    <div class="flex">
+      <div style="flex:1">
+        <a href="https://disk.yandex.ru/i/gTZ56Y_10w_4EA" target="_blank">Posinion</a>
+      </div>
+      <div style="flex:1">
+        <a href="posinion.html" target="_blank">Posinion</a>
+      </div>
+      <div style="flex:1">
+        <a href="https://disk.yandex.ru/i/gTZ56Y_10w_4EA" target="_blank">position (дз в конце урока)</a>
+      </div>
+    </div>
+  </div>
 
-  <h1>Bootstrap</h1>
-
-  <a href="https://getbootstrap.su/" target="_blank">Русская версия</a>
-  <a href="https://getbootstrap.com/" target="_blank">Английская версия</a>
-  <a href="https://icons.getbootstrap.su/"target="_blank">Иконки</a>
-  <a href="https://cheatsheet.getbootstrap.su/"target="_blank">Шпаргалка</a>
-  <a href="https://disk.yandex.ru/d/KwdXQropyuL3Iw" target="_blank">Материалы</a>
-  <a href="https://getbootstrap.su/docs/5.3/getting-started/introduction/" target="_blank">Иконки</a>
-  <a href="https://getbootstrap.su/docs/5.2/examples/cheatsheet/" target="_blank">Примеры </a>
-  
-  <h2>Материалы уроков</h2>
-  <a href="https://disk.yandex.ru/i/_7wfjKNFUe-J_Q" target="_blank">Таблицы</a>
-  <a href="https://disk.yandex.ru/i/Z7-joNLEqmUSJg" target="_blank">Анимации</a>
-  <a href="https://disk.yandex.ru/i/5W36kPgotlvQOA" target="_blank">Блочная модель</a>
-  <a href="https://disk.yandex.ru/i/1zpAm9CkffpUXQ" target="_blank">Свойство display и псевдоэлементы</a>
-  <a href="https://disk.yandex.ru/i/gTZ56Y_10w_4EA" target="_blank">Posinion</a>
-  
-  <h2>Коды уроков + доп.материалы</h2>
-  <a href="tables.html" target="_blank">Таблицы</a>
-  <a href="./animation/" target="_blank">Анимации</a>
-  <a href="https://doka.guide/css/transition/" target="_blank">Doca transition</a>
-  <a href="https://doka.guide/css/animation/" target="_blank">Doca Анимации</a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function" target="_blank">Функции анимации</a>
-  <a href="https://cubic-bezier.com/#0,0,1,1" target="_blank">Генератор функций анимаций</a>
-  <a href="block_model.html" target="_blank">Блочная модель</a>
-  <a href="display&pseudo.html" target="_blank">Свойство display и псевдоэлементы</a>
-  <a href="posinion.html" target="_blank">Posinion</a>
-  
-  <h3>ДЗ</h3>
-  <a href="https://disk.yandex.ru/i/nQ9Euee_uCgcIw" target="_blank">1</a>
-  <a href="./tables/" target="_blank">1 решение</a>
-  <a href="https://disk.yandex.ru/i/tqiyiByrXXbyww" target="_blank">2</a>
-  <a href="https://disk.yandex.ru/i/7WSWKy4CCEggMA" target="_blank">анимации</a>
-  <a href="https://disk.yandex.ru/i/5M1x0xow60Mrjg" target="_blank">анимации</a>
-  <a href="https://disk.yandex.ru/i/p5TxQqGLj2RMdA" target="_blank">блоки</a>
-  <a href="https://disk.yandex.ru/i/nbWRua1MEU5_xw" target="_blank">блоки</a>
-  <a href="https://disk.yandex.ru/i/fhZCyLrQE91GSw" target="_blank">display и псевдоэлементы</a>
-  <a href="https://disk.yandex.ru/i/UKO8vh7aEFO12A" target="_blank">display и псевдоэлементы</a>
-  <a href="https://disk.yandex.ru/i/gTZ56Y_10w_4EA" target="_blank">position (дз в конце урока)</a>
+  <div class="materials">
+    <p>
+      Скачать и установить Git
+    </p>
+    <p>
+      Перезагрузить VSCode
+    </p>
+    <p>
+      Перейти в книгу, пункт 1.6 https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+    </p>
+    <p>
+      Ввести 2 команды в VSCode (Установка имени и почты git)
+    </p>
+    <p>
+      git config --global user.name "John Doe"
+    </p>
+    <p>
+      git config --global user.email johndoe@example.com
+    </p>
+    <p>
+      Нажать на шестерёнку, включить синхронизацию через GitHub
+    </p>
+  </div>
 
 </body>
+
 </html>
