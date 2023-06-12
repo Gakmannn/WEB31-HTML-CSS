@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Всегда важен порядок подключения стилей и появления медиа-запросов -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Указывая медиа-запрос в теге link, мы можем писать стили в файле как обычно, не оборачиывая их в свойство media -->
+  <link rel="stylesheet" media="screen and (min-width:1280px)" href="style-1280.css">
+  <link rel="stylesheet" media="screen and (min-width:960px)" href="style-960.css"> 
+  <!-- Если медиа-запрос в теге link, не указан, то в файле стилей необходимо указать media -->
+  <link rel="stylesheet" href="style-600.css">
+  <!-- В рабочих проектах тег style не используется -->
+  <style>
+    /* общие стили для больших дисплеев */
+    @media screen and (max-width:1280px) {
+      /* общие стили для дисплеев поменьше */
+    }
+    @media screen and (max-width:960px) {
+      /* общие стили для планшетов */
+    }
+    @media screen and (max-width:600px) {
+      /* общие стили для мобильных устройств */
+    }
+  </style>
+</head>
+<body>
+  <p>Display size</p>
+  <p><b>При указании max-width само значение является переходной точкой и не включается в правила</b></p>
+  <p>Small to large phone from 280px to 600px (Так же захватывает маленькие планшеты и книжки)</p>
+  <p>Small sm Small to medium tablet from 600px to 960px (примерно все планшеты и книжки)</p>
+  <p>Medium md Large tablet to laptop from 960px to 1280px (остальные планшеты, книжки и ноутбуки)</p>
+  <p>!!!! Ноутбуки с разрешением 1366px. Используем flex и width:100%</p>
+  <p>Large lg Laptop to desktop from 1280px to 1920px</p>
+  <p>Стандартная ширина контента большинства проектов 1400px</p>
+
+  <p><b>Всегда указываем только одно значение в media (max-width:XXXpx)</b></p>
+
+  <p>Стили срабатывают по очереди сверху вниз</p>
+  <p>Если какой-то стиль появляется ниже, он переписывает то, что было выше</p>
+</body>
+</html>
