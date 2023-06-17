@@ -60,6 +60,45 @@
       padding: 0;
       list-style: none;
     }
+    .topFinder {
+      display: none;
+    }
+    @media screen and (max-width:1024px) {
+      .topFinder {
+        display: inline;
+      }
+      .navFinder {
+        display: none;
+      }
+      aside {
+        width: 160px;
+      }
+      .img {
+        height: 200px;
+      }
+    }
+    @media screen and (max-width:768px) {
+      .list {
+        display: none;
+      }
+      .content {
+        flex-direction: column;
+      }
+      aside {
+        width: 100%;
+        margin: 10px 0;
+        box-sizing: border-box;
+      }
+      .aife {
+        align-items: flex-start;
+      }
+      .hide {
+        display: none;
+      }
+      aside>.flex {
+        flex-wrap:nowrap;
+      }
+    }
   </style>
 </head>
 <body>
@@ -67,17 +106,17 @@
     <header>
       <div class="flex jcsb aife">
         <div class="logo">Logo</div>
-        <input type="text" placeholder="find"/>
+        <input type="text" placeholder="find" class="topFinder"/>
       </div>
       <nav class="flex">
         <a href="#">home</a>
         <a href="#">about</a>
         <a href="#">galery</a>
         <a href="#">contact</a>
-        <input type="text" placeholder="find"/>
+        <input type="text" placeholder="find" class="navFinder"/>
       </nav>
     </header>
-    <div class="flex">
+    <div class="flex content">
       <main>
         <h1>Lorem ipsum dolor</h1>
         <div class="img"></div>
@@ -85,7 +124,7 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia doloribus molestias, consequuntur incidunt sequi, quam nam neque officiis fugiat alias hic non quia. Ab, voluptates porro. Accusamus iusto animi consectetur.</p>
       </main>
       <div>
-        <aside>
+        <aside class="list">
           <p>List</p>
           <ul>
             <li>item 1</li>
@@ -99,11 +138,11 @@
           Lorem
           <div class="flex">
             <div class="img"></div>
+            <div class="img hide"></div>
             <div class="img"></div>
             <div class="img"></div>
             <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
+            <div class="img hide"></div>
             <div class="img"></div>
             <div class="img"></div>
           </div>
