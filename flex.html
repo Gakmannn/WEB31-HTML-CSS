@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+  .flex {
+    display: flex;
+  }
+  .flex div {
+    padding: 60px;
+    color: white;
+    font-size: 60px;
+  }
+  .flex div:nth-child(1) {
+    background-color: #123;
+  }
+  .flex div:nth-child(2) {
+    background-color: #234;
+  }
+  .flex div:nth-child(3) {
+    background-color: #345;
+  }
+  .flex div:nth-child(4) {
+    background-color: #456;
+  }
+  .flex div:nth-child(5) {
+    background-color: #567;
+  }
+  .flex div:nth-child(6) {
+    background-color: #678;
+  }
+  .flex div:nth-child(7) {
+    background-color: #890;
+  }
+</style>
+</head>
+
+<body>
+
+  <p style="margin-bottom: 10px;">
+    align-content позволяет расположить элементы по дополнительной оси и работате только при flex-wrap wrap или wrap-reverse <br>
+    Если flex-direction row, то дополнительной осью будет ось "y" <br>
+    Если flex-direction column,- ось "x"
+    Место в дополнительной оси должно быть ограничено
+  </p>
+
+  <p style="margin-bottom: 10px;">
+    flex-basis позволяет назначить базовый размер flex-элемента по основной оси. <br> 
+    Если flex-direction row, то базовый размер будет относиться к ширине <br>
+    Если flex-direction column,- к высоте
+  </p>
+  
+  <p style="margin-bottom: 10px;">
+    flex-grow позволяет flex-элементу заполнить всё свободное пространство по заданной оси <br>
+    Значение по умолчанию, "0". Элементы не стремятся заполнить всё пространство <br>
+    Указывая различные значения flex-grow для элементов, можем заставить их заполнять определенноё количество пространства (например 3-1-2 и т.д.)
+  </p>
+  
+  <p style="margin-bottom: 10px;">
+    flex-shrink определяет возможность сжатья flex-элемента <br>
+    Значение по умолчанию, "1". Элементы сжимаются до минимально возможных размеров <br>
+    Значение "0" запретит сжатие flex-элемента
+  </p>
+    
+  <p style="margin-bottom: 100px;">
+    Обобщенное свойство flex <br>
+    Свойство flex позволяет задать сразу 3 предыдущих
+    значения через пробел в такой последовательности: <br>
+    flex: flex-grow flex-shrink flex-basis; <br>
+    Значение по умолчанию: flex: 0 1 auto; <br>
+    Варианты написания: <br>
+    /* Одно значение, число без размерности: flex-grow */ <br>
+    flex: 2; <br>
+    /* Одно значение, ширина/высота: flex-basis */ <br>
+    flex: 250px; <br>
+    /* Два значения: flex-grow | flex-basis */ <br>
+    flex: 1 30px; <br>
+    /* Два значения: flex-grow | flex-shrink */ <br>
+    flex: 2 2; <br>
+    /* Три значения: flex-grow | flex-shrink | flex-basis */ <br>
+    flex: 2 1 25%
+  </p>
+
+
+  <div class="flex">
+    <!-- <div>
+      <b>sdffasd</b>
+      <div>1</div>
+      <div>1</div>
+    </div> -->
+    <!-- свой ство order flex модели позволяет переопределить порядок элементов -->
+    <!-- Элементы с положительным значением order помещаются в конец в порядке возрастания значения order -->
+    <div style="order: 1;">1</div>
+    <div>2</div>
+    <div style="flex-basis: 100px;">3</div>
+    <div style="flex-grow: 1;">4</div>
+    <div style="flex-shrink: 0;">5</div>
+    <div style="flex:1 1 200px">6</div>
+    <!-- Элементы с отрицательным значением order помещаются в начало в порядке возрастания значения order -->
+    <div style="order: -2;">7</div>
+  </div>
+  
+  <div class="flex" style="justify-content: center; margin: 100px;">
+    <div class="flex" style="height: 300px; width: 300px; align-items: center; justify-content: center;"><p>Hello</p></div>
+  </div>
+
+</body>
+
+</html>
