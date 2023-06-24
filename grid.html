@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .grid-container {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 100px;
+      grid-template-rows: 50px 30px;
+    }
+    .grid-container div {
+      background-color: cadetblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="item-1">child-item-1</div>
+    <div class="item-2">child-item-2 </div>
+    <div class="item-3">child-item-3</div>
+    <div class="item-3">child-item-3</div>
+    <div class="item-3">child-item-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, repudiandae omnis quaerat earum deleniti minima
+      veniam blanditiis incidunt dicta, laboriosam voluptate dolore cumque doloribus perspiciatis error ratione accusamus
+      atque neque!|</div>
+    <div class="item-3">child-item-3</div>
+  </div>
+</body>
+</html>
