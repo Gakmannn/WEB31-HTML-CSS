@@ -1,0 +1,78 @@
+@pad1:20px;
+@pad2:15px;
+@check:boolean(@pad1<@pad2); 
+div{
+  background-color:  aqua;
+  padding: if(@check, @pad1, @pad2);
+}
+
+
+@bgColor:dark-orange;
+div{
+  background-color: replace(@bgColor, '-', '');
+}
+
+
+
+each(range(3), {
+  .cell-@{value} {
+    width: (@value * 15vw);
+  }
+});
+@list: range(5px,20px,5px);
+div{
+  background-color:aqua;
+  padding: extract(@list, 1) extract(@list, 3);
+}
+
+
+@size-ceil: ceil(1.3);
+@size-floor: floor(2.8);
+@size-rnd: round(2.15, 1);
+div{
+  font-size: percentage(max(@size-ceil,@size-floor,@size-rnd));
+}
+
+
+
+
+@colBg:color("pink");
+@colFg:color("purple");
+@padd:convert(5mm, pt);
+@marg: unit(5, get-unit(2vw));
+div {
+    background-color: @colBg;
+    color: @colFg;
+    padding: @padd;
+    margin: @marg;
+}
+
+
+
+@col1:color("#eee");
+@col2:color("#99e");
+@list:@col2 30%, @col1 70%, @col2;
+div {
+    background-image: svg-gradient(to top right, @list);
+    background-size: 100%;
+  }
+
+
+
+@col1:#ff0000;
+@col2:spin(@col1, 70%);
+@col3:shade(@col1, 30%);
+div {
+    color: @col2;
+    background-color: @col3;
+}
+
+
+@col1:#0000ff;
+@col2:#dddddd;
+@colText:average(@col1, @col2);
+@colBG:negation(@col1, @col2);
+div {
+    color: @colText;
+    background-color: @colBG;
+}

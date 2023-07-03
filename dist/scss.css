@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/*переменная — имя селектора*/
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 2em 0 -2px;
+}
+
+/*переменная — путь*/
+.selector {
+  background: url("img-2.jpg");
+  border: 5px dotted bisque;
+}
+
+li + li {
+  margin: 5px;
+}
+li li {
+  list-style-type: circle;
+}
+
+.container {
+  max-width: 1000px;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+.container .content {
+  background: bisque;
+  padding: 20px;
+}
+.container .content-active {
+  color: red;
+}
+.container .content h1 {
+  font-size: 20px;
+}
+.container .content p {
+  color: aqua;
+}
+.container .content p:hover {
+  color: blue;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 0 10px;
+  }
+  .container .content {
+    padding: 10px;
+  }
+  .container .content h1 {
+    font-size: 15px;
+  }
+}

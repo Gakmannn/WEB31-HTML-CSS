@@ -1,0 +1,85 @@
+$bgColor: bisque;
+$borderRadius: 10px;
+
+/*переменная — имя селектора*/
+$selector-class: border;
+$selector-id: center;
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin horizontal-list {
+  @include reset-list;
+
+  li {
+    display: inline-block;
+    margin: 0 2em 0 -2px;
+  }
+}
+
+nav ul {
+  @include horizontal-list;
+}
+
+
+/*переменная — путь*/
+$path: "images/";
+.selector {
+ background: url("img-2.jpg");
+ border: 5px dotted $bgColor;
+}
+
+li {
+ & + & {
+ margin: 5px;
+ }
+ & & {
+ list-style-type: circle; 
+ }
+}
+
+p {
+  color: #010203 + #040506;
+}
+
+$col1: #ccc;
+$col2: #999;
+
+.container {
+  max-width: 1000px;
+  border-radius: $borderRadius;
+  margin: 20px auto;
+  .content {
+    background: $bgColor;
+    padding: 20px;
+    &-active {
+      color: red;
+    }
+    h1 {
+      font-size: 20px;
+    }
+    p {
+      color: aqua;
+      &:hover {
+        color: blue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:600px) {
+  .container {
+  border-radius: $borderRadius;
+  margin: 10px auto;
+  padding: 0 10px;
+  .content {
+    padding: 10px;
+    h1 {
+      font-size: 15px;
+    }
+  }
+}
+}

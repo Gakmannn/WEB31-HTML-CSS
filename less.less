@@ -1,0 +1,103 @@
+@bgColor: bisque;
+@borderRadius: 10px;
+
+/*переменная — имя селектора*/
+@selector-class: border;
+@selector-id: center;
+
+.className(@color) {
+ color: @color;
+}
+#idName(@color, @colorHover) {
+ color: @color;
+ &:hover{
+  color: @colorHover;
+ }
+}
+.mixin-class {
+ .className(pink);
+}
+#mixin-id {
+ #idName(red, blue);
+}
+
+@prop: color;
+@pad-1: 5vw;
+@pad-2: 5px;
+@col-1: #ccc;
+@col-2: #999;
+#@{selector-id} {
+ @{prop}: (@col-1 - @col-2);
+ padding: (@pad-1 + @pad-2);
+}
+
+.@{selector-class} {
+ border: 5px dotted @bgColor;
+}
+#@{selector-id}-@{selector-class} {
+ padding: 10px;
+}
+
+/*переменная — имя свойства*/
+@prop: color;
+#center1 {
+ @{prop}: pink;
+ padding: 10px;
+}
+
+aside {
+  #center1();
+  margin: 10px;
+}
+
+/*переменная — путь*/
+@path: "images/";
+.@{selector-class} {
+ background: url("@{path}img-2.jpg");
+ border: 5px dotted @bgColor;
+}
+
+li {
+ & + & {
+ margin-left: 5px;
+ }
+ & & {
+ list-style-type: circle; 
+ }
+}
+
+.container {
+  max-width: 1000px;
+  border-radius: @borderRadius;
+  margin: 20px auto;
+  .content {
+    background: @bgColor;
+    padding: 20px;
+    &-active {
+      color: red;
+    }
+    h1 {
+      font-size: 20px;
+    }
+    p {
+      color: aqua;
+      &:hover {
+        color: blue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:600px) {
+  .container {
+  border-radius: @borderRadius;
+  margin: 10px auto;
+  padding: 0 10px;
+  .content {
+    padding: 10px;
+    h1 {
+      font-size: 15px;
+    }
+  }
+}
+}
